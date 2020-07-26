@@ -1,0 +1,30 @@
+.itemFirstLevel {
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--secondary-color-grey);
+  text-align: center;
+  vertical-align: center;
+  color: #fff;
+  margin: 5px 10px;
+  padding: 0;
+}
+
+.itemFirstLevel:hover {
+  cursor: pointer;
+}
+
+.itemSecondLevel {
+  composes: itemFirstLevel;
+  background-color: var(--secondary-color-blue);
+}
+
+.itemThirdLevel {
+  composes: itemFirstLevel;
+  background-color: var(--secondary-color-green);
+}
+
+.itemFourthLevel {
+  composes: itemFirstLevel;
+  background-color: var(--secondary-color-red);
+}
