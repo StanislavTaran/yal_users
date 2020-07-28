@@ -1,0 +1,12 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: calc(100% + 1px);
+  background-color: rgb(52, 52, 59);
+}
