@@ -7,7 +7,7 @@ const UserList = ({ users }) => {
   return (
     <ol className={styles.list}>
       {users.map(user => (
-        <UserItem name={user.firstName} surname={user.lastName} />
+        <UserItem key={user.id} name={user.firstName} surname={user.lastName} />
       ))}
     </ol>
   );
