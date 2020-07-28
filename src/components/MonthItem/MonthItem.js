@@ -19,7 +19,6 @@ const MonthItem = ({ month, numberUsers }) => {
 
     default:
       stylesItem = styles.itemFirstLevel;
-      console.log(numberUsers);
   }
 
   return <li className={stylesItem}>{month[0]}</li>;
