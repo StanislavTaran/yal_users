@@ -6,10 +6,12 @@ import fadeTransition from '../../styles/transitions/fade.module.css';
 import UserList from '../UserList/UserList';
 import styles from './MonthItem.module.css';
 
+
 class MonthItem extends React.Component {
   state = {
     isShowUsers: false,
   };
+
 
   showUsers = () => {
     this.setState({
@@ -57,9 +59,10 @@ class MonthItem extends React.Component {
   }
 }
 
+
 MonthItem.propTypes = {
-  month: propTypes.arrayOf(propTypes.any).isRequired,
-  numberUsers: propTypes.number.isRequired,
+  usersList: propTypes.arrayOf(propTypes.shape({})).isRequired,
+  monthName: propTypes.string.isRequired,
 };
 
 export default MonthItem;
