@@ -4,18 +4,18 @@ import { getUsersSucces, getUsersError } from './users.actions';
 import countBDInMonth from '../../utils/countBDInMonth';
 
 const monthsInitialState = {
-  January: [],
-  February: [],
-  March: [],
-  April: [],
-  May: [],
-  June: [],
-  July: [],
-  August: [],
-  September: [],
-  October: [],
-  November: [],
-  December: [],
+  january: [],
+  february: [],
+  march: [],
+  april: [],
+  may: [],
+  june: [],
+  july: [],
+  august: [],
+  september: [],
+  october: [],
+  november: [],
+  december: [],
 };
 
 const monthsWithUsers = createReducer(monthsInitialState, {

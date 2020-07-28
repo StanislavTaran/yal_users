@@ -6,8 +6,13 @@ import styles from './MonthList.module.css';
 const MonthsList = ({ months }) => {
   return (
     <ul className={styles.monthsList}>
-      {Object.keys(months).map(monthName => (
-        <MonthItem key={monthName} monthName={monthName} usersList={months[monthName]} />
+      {Object.values(months).map((month, idx) => (
+        <MonthItem
+          key={Object.keys(months)[idx]}
+          monthName={Object.keys(months)[idx]}
+          usersList={Object.values(months)[idx]}
+          length={month.length}
+        />
       ))}
     </ul>
   );

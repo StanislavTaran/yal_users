@@ -2,10 +2,10 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styles from './MonthItem.module.css';
 
-const MonthItem = ({ monthName, usersList }) => {
+const MonthItem = ({ monthName, usersList, length }) => {
   const numberUsers = usersList.length;
   // usersList.push({ a: 'hello' });
-  // console.log(usersList);
+  console.log(length);
   // console.log('numberUsers' + numberUsers);
 
   let stylesItem;
