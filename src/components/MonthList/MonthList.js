@@ -6,15 +6,15 @@ import styles from './MonthList.module.css';
 const MonthsList = ({ months }) => {
   return (
     <ul className={styles.monthsList}>
-      {months.map(month => (
-        <MonthItem key={month[0]} month={month} numberUsers={month.length - 1} />
+      {Object.keys(months).map(monthName => (
+        <MonthItem key={monthName} monthName={monthName} usersList={months[monthName]} />
       ))}
     </ul>
   );
 };
 
 MonthsList.propTypes = {
-  months: propTypes.arrayOf(propTypes.array).isRequired,
+  months: propTypes.objectOf(propTypes.arrayOf(propTypes.object)).isRequired,
 };
 
 export default MonthsList;

@@ -2,7 +2,12 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styles from './MonthItem.module.css';
 
-const MonthItem = ({ month, numberUsers }) => {
+const MonthItem = ({ monthName, usersList }) => {
+  const numberUsers = usersList.length;
+  // usersList.push({ a: 'hello' });
+  // console.log(usersList);
+  // console.log('numberUsers' + numberUsers);
+
   let stylesItem;
   switch (true) {
     case numberUsers < 7 && numberUsers > 2:
@@ -19,15 +24,14 @@ const MonthItem = ({ month, numberUsers }) => {
 
     default:
       stylesItem = styles.itemFirstLevel;
-      console.log(numberUsers);
   }
 
-  return <li className={stylesItem}>{month[0]}</li>;
+  return <li className={stylesItem}>{monthName}</li>;
 };
 
 MonthItem.propTypes = {
-  month: propTypes.arrayOf(propTypes.any).isRequired,
-  numberUsers: propTypes.number.isRequired,
+  usersList: propTypes.arrayOf(propTypes.shape({})).isRequired,
+  monthName: propTypes.string.isRequired,
 };
 
 export default MonthItem;
