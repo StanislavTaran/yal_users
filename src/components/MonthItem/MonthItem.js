@@ -1,28 +1,61 @@
+/* eslint-disable max-len */
 import React from 'react';
 import propTypes from 'prop-types';
+import { CSSTransition } from 'react-transition-group';
+import fadeTransition from '../../styles/transitions/fade.module.css';
+import UserList from '../UserList/UserList';
 import styles from './MonthItem.module.css';
 
-const MonthItem = ({ month, numberUsers }) => {
-  let stylesItem;
-  switch (true) {
-    case numberUsers < 7 && numberUsers > 2:
-      stylesItem = styles.itemSecondLevel;
-      break;
+class MonthItem extends React.Component {
+  state = {
+    isShowUsers: false,
+  };
 
-    case numberUsers < 11 && numberUsers > 6:
-      stylesItem = styles.itemThirdLevel;
-      break;
+  showUsers = () => {
+    this.setState({
+      isShowUsers: true,
+    });
+  };
 
-    case numberUsers >= 11:
-      stylesItem = styles.itemFourthLevel;
-      break;
+  hideUsers = () => {
+    this.setState({
+      isShowUsers: false,
+    });
+  };
 
-    default:
-      stylesItem = styles.itemFirstLevel;
+  render() {
+    const { numberUsers, month } = this.props;
+    const { isShowUsers } = this.state;
+    const users = month.slice(1);
+
+    let stylesItem;
+    switch (true) {
+      case numberUsers < 7 && numberUsers > 2:
+        stylesItem = styles.itemSecondLevel;
+        break;
+
+      case numberUsers < 11 && numberUsers > 6:
+        stylesItem = styles.itemThirdLevel;
+        break;
+
+      case numberUsers >= 11:
+        stylesItem = styles.itemFourthLevel;
+        break;
+
+      default:
+        stylesItem = styles.itemFirstLevel;
+    }
+
+    return (
+      <li className={stylesItem} onMouseEnter={() => this.showUsers()} onMouseLeave={() => this.hideUsers()}>
+        {month[0]}
+        <CSSTransition in={isShowUsers} timeout={200} classNames={fadeTransition} unmountOnExit>
+          <UserList users={users} />
+        </CSSTransition>
+      </li>
+    );
   }
-
-  return <li className={stylesItem}>{month[0]}</li>;
-};
+}
 
 MonthItem.propTypes = {
   month: propTypes.arrayOf(propTypes.any).isRequired,
