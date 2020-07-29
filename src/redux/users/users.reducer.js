@@ -3,10 +3,6 @@ import { createReducer } from '@reduxjs/toolkit';
 import { getUsersSucces, getUsersError } from './users.actions';
 import countBDInMonth from '../../utils/countBDInMonth';
 
-const usersList = createReducer([], {
-  [getUsersSucces]: (state, action) => [...action.payload],
-});
-
 const errors = createReducer(
   {},
   {
@@ -36,6 +32,6 @@ const monthsWithUsers = createReducer([], {
   },
 });
 
-const users = combineReducers({ usersList, errors, monthsWithUsers });
+const users = combineReducers({ monthsWithUsers, errors });
 
 export default users;

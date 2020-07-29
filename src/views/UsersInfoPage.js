@@ -1,26 +1,24 @@
 /* eslint-disable react/destructuring-assignment */
-import React from 'react';
+import React, { useEffect } from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MonthsList from '../components/MonthList/MonthsList.container';
-import { getUsersInfo } from '../redux/users/users.operations';
+import * as userOperations from '../redux/users/users.operations';
 
-class UsersInfoPage extends React.Component {
-  componentDidMount() {
-    this.props.getUsersInfo();
-  }
+const UsersInfoPage = ({ getUsersInfo }) => {
+  useEffect(() => {
+    getUsersInfo();
+  }, [getUsersInfo]);
 
-  render() {
-    return (
-      <section>
-        <MonthsList />
-      </section>
-    );
-  }
-}
+  return (
+    <section>
+      <MonthsList />
+    </section>
+  );
+};
 
 const mapDispatchToProps = dispatch => {
-  return { getUsersInfo: () => dispatch(getUsersInfo()) };
+  return { getUsersInfo: () => dispatch(userOperations.getUsersInfo()) };
 };
 
 UsersInfoPage.propTypes = {

@@ -1,2 +1,2 @@
 export const getMonthsWithUsers = state => state.monthsWithUsers;
-export const getUsers = state => state.users;
+export const getErrors = state => state.errors;
