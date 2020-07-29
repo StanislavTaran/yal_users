@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/yal_users/static/css/main.3084daf5.chunk.css",
-    "main.js": "/yal_users/static/js/main.7ab0fbfb.chunk.js",
-    "main.js.map": "/yal_users/static/js/main.7ab0fbfb.chunk.js.map",
+    "main.css": "/yal_users/static/css/main.5c85cd37.chunk.css",
+    "main.js": "/yal_users/static/js/main.29fd8aa3.chunk.js",
+    "main.js.map": "/yal_users/static/js/main.29fd8aa3.chunk.js.map",
     "runtime-main.js": "/yal_users/static/js/runtime-main.e6d6accf.js",
     "runtime-main.js.map": "/yal_users/static/js/runtime-main.e6d6accf.js.map",
-    "static/js/2.092c5097.chunk.js": "/yal_users/static/js/2.092c5097.chunk.js",
-    "static/js/2.092c5097.chunk.js.map": "/yal_users/static/js/2.092c5097.chunk.js.map",
+    "static/js/2.22baac88.chunk.js": "/yal_users/static/js/2.22baac88.chunk.js",
+    "static/js/2.22baac88.chunk.js.map": "/yal_users/static/js/2.22baac88.chunk.js.map",
     "index.html": "/yal_users/index.html",
-    "precache-manifest.13d837706293d65c870acebe23fb4a98.js": "/yal_users/precache-manifest.13d837706293d65c870acebe23fb4a98.js",
+    "precache-manifest.010c8bcc4109ad7df8dbdbb37668966a.js": "/yal_users/precache-manifest.010c8bcc4109ad7df8dbdbb37668966a.js",
     "service-worker.js": "/yal_users/service-worker.js",
-    "static/css/main.3084daf5.chunk.css.map": "/yal_users/static/css/main.3084daf5.chunk.css.map",
-    "static/js/2.092c5097.chunk.js.LICENSE.txt": "/yal_users/static/js/2.092c5097.chunk.js.LICENSE.txt"
+    "static/css/main.5c85cd37.chunk.css.map": "/yal_users/static/css/main.5c85cd37.chunk.css.map",
+    "static/js/2.22baac88.chunk.js.LICENSE.txt": "/yal_users/static/js/2.22baac88.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e6d6accf.js",
-    "static/js/2.092c5097.chunk.js",
-    "static/css/main.3084daf5.chunk.css",
-    "static/js/main.7ab0fbfb.chunk.js"
+    "static/js/2.22baac88.chunk.js",
+    "static/css/main.5c85cd37.chunk.css",
+    "static/js/main.29fd8aa3.chunk.js"
   ]
 }
