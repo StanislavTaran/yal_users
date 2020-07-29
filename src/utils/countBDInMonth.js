@@ -1,8 +1,9 @@
 const countBD = (persistedMonths, users) => {
   return users.reduce((acc, user) => {
-    const month = new Date(user.dob).getMonth();
+    const formatedDate = new Date(user.dob);
+    const month = formatedDate.getMonth();
 
-    acc[month].push(user);
+    acc[month].push({ ...user, formatedDayOfBD: new Intl.DateTimeFormat().format(formatedDate) });
     return acc;
   }, persistedMonths);
 };

@@ -1,0 +1,17 @@
+.errorBlock {
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(255, 44, 44);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.errorText {
+  text-transform: uppercase;
+  height: 100%;
+  line-height: 100%;
+}

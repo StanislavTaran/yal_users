@@ -1,14 +1,13 @@
 import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
-import { getUsersSucces, getUsersError } from './users.actions';
+import { getUsersSucces, getUsersError, getUsersRequest } from './users.actions';
 import countBDInMonth from '../../utils/countBDInMonth';
 
-const errors = createReducer(
-  {},
-  {
-    [getUsersError]: (state, action) => action.payload,
-  },
-);
+const errors = createReducer(null, {
+  [getUsersError]: (state, action) => action.payload,
+  [getUsersSucces]: () => null,
+  [getUsersRequest]: () => null,
+});
 
 const monthsInitialState = [
   ['Январь'],
